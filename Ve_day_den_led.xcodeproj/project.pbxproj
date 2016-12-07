@@ -13,6 +13,7 @@
 		15F5E13F1DF65B50004A3C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15F5E13E1DF65B50004A3C59 /* Assets.xcassets */; };
 		15F5E1421DF65B50004A3C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F5E1401DF65B50004A3C59 /* LaunchScreen.storyboard */; };
 		15F5E14A1DF65BA2004A3C59 /* green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15F5E1491DF65BA2004A3C59 /* green@2x.png */; };
+		15F5E14C1DF6996E004A3C59 /* grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15F5E14B1DF6996E004A3C59 /* grey@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		15F5E1411DF65B50004A3C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15F5E1431DF65B50004A3C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15F5E1491DF65BA2004A3C59 /* green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green@2x.png"; sourceTree = "<group>"; };
+		15F5E14B1DF6996E004A3C59 /* grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				15F5E13B1DF65B50004A3C59 /* Main.storyboard */,
 				15F5E13E1DF65B50004A3C59 /* Assets.xcassets */,
 				15F5E1491DF65BA2004A3C59 /* green@2x.png */,
+				15F5E14B1DF6996E004A3C59 /* grey@2x.png */,
 				15F5E1401DF65B50004A3C59 /* LaunchScreen.storyboard */,
 				15F5E1431DF65B50004A3C59 /* Info.plist */,
 			);
@@ -129,6 +132,7 @@
 				15F5E1421DF65B50004A3C59 /* LaunchScreen.storyboard in Resources */,
 				15F5E13F1DF65B50004A3C59 /* Assets.xcassets in Resources */,
 				15F5E14A1DF65BA2004A3C59 /* green@2x.png in Resources */,
+				15F5E14C1DF6996E004A3C59 /* grey@2x.png in Resources */,
 				15F5E13D1DF65B50004A3C59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +305,7 @@
 				15F5E1481DF65B50004A3C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

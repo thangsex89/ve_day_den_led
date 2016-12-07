@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var n = 0;
      var khoangcach_hang: Float = 40 ;
     var khoangcach_cot: Float = 80;
+    var led_last_on :Int = 0
     @IBAction func btn_draw(_ sender: UIButton) {
      if (textf_ball_number.text?.isEmpty)!
      {
@@ -29,13 +30,75 @@ class ViewController: UIViewController {
       
         
     }
+    
+    @IBAction func btn_turn_on_led(_ sender: UIButton) {
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runningled), userInfo: nil, repeats: true)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // start
-       
+        
+     
         
         //end
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    func runningled() ->  Void {
+        print ("runningled")
+        
+        if ( led_last_on != -1)
+        {
+            turn_off_led()
+        }
+        if (led_last_on !=  GetNumberball() - 1 )
+        {
+            led_last_on = led_last_on + 1
+        }else
+        {
+            led_last_on = 0
+            
+        }
+        turn_on_led()
+        // led chạy tử phải sang trái ( add gán biến GetNumberball() - 1 )
+//
+//        if ( led_last_on != -1)
+//        {
+//            turn_off_led()
+//        }
+//        if (led_last_on !=  0 )
+//        {
+//            led_last_on = led_last_on - 1
+//        }else
+//        {
+//            led_last_on = GetNumberball() - 1
+//            
+//        }
+//        turn_on_led()
+        
+    }
+    func  turn_on_led () -> Void {
+       if  let ball = self.view.viewWithTag(100 + led_last_on)
+        as? UIImageView
+       {
+        
+      ball.image = UIImage(named: "green@2x")
+        
+     }
+    }
+    func turn_off_led() -> Void  {
+        if  let ball = self.view.viewWithTag(100 + led_last_on)
+            as? UIImageView
+        {
+            
+            ball.image = UIImage(named: "grey@2x")
+            
+        }
+
+    }
+    func GetNumberball() -> Int {
+         var   n = Int(textf_ball_number.text!)!
+        return n
     }
     func Space_between_baal_hang( soluongbong : Int ) -> Float {
         var space : Float = 0;
@@ -75,6 +138,7 @@ class ViewController: UIViewController {
             let ball =  UIImageView (image : image)
             
             ball.center = CGPoint(x: Int(khoangcach_hang) +  indexhang * space_hang, y:  Int(khoangcach_cot) +  intdexcot * space_cot)
+                ball.tag = indexhang + 100
             self.view.addSubview(ball) // hien thi anh ball len tren man hinh
             }
         }
